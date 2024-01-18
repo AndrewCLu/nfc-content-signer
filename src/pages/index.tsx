@@ -1,6 +1,7 @@
 import React, { useState, ChangeEvent, useEffect } from "react";
 // @ts-ignore
 import { execHaloCmdWeb } from "@arx-research/libhalo/api/web.js";
+import { FaGithub } from "react-icons/fa";
 
 const App: React.FC = () => {
   const [inputText, setInputText] = useState<string>("");
@@ -129,6 +130,11 @@ const App: React.FC = () => {
           </button>
         </div>
       )}
+      <div className="pt-2">
+        <a href="https://github.com/AndrewCLu/nfc-content-signer">
+          <FaGithub />
+        </a>
+      </div>
     </div>
   );
 };
