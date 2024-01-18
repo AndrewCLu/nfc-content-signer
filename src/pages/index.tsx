@@ -80,11 +80,11 @@ const App: React.FC = () => {
         placeholder="Paste your text here"
       />
       {hashedText && (
-        <div className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-lg bg-gray-100">
+        <div className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-lg bg-gray-100 break-words">
           <h2 className="text-md sm:text-lg font-semibold text-gray-700">
             Text Hash
           </h2>
-          <p className="text-gray-600">{hashedText}</p>
+          <p className="text-gray-600 break-all">{hashedText}</p>
           <button
             className="mt-2 px-4 py-1 bg-blue-300 text-white rounded hover:bg-blue-400 transition-colors flex items-center"
             onClick={() => copyToClipboard(hashedText)}
@@ -100,11 +100,11 @@ const App: React.FC = () => {
         Sign with NFC Card
       </button>
       {publicKey && (
-        <div className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-lg bg-gray-100">
+        <div className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-lg bg-gray-100 break-words">
           <h2 className="text-md sm:text-lg font-semibold text-gray-700">
             Public Key
           </h2>
-          <p className="text-gray-600">{publicKey}</p>
+          <p className="text-gray-600 break-all">{publicKey}</p>
           <button
             className="mt-2 px-4 py-1 bg-blue-300 text-white rounded hover:bg-blue-400 transition-colors flex items-center"
             onClick={() => copyToClipboard(publicKey)}
@@ -114,11 +114,11 @@ const App: React.FC = () => {
         </div>
       )}
       {signature && (
-        <div className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-lg bg-gray-100">
+        <div className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-lg bg-gray-100 break-words">
           <h2 className="text-md sm:text-lg font-semibold text-gray-700">
             Signature
           </h2>
-          <p className="text-gray-600">{signature}</p>
+          <p className="text-gray-600 break-all">{signature}</p>
           <button
             className="mt-2 px-4 py-1 bg-blue-300 text-white rounded hover:bg-blue-400 transition-colors flex items-center"
             onClick={() => copyToClipboard(signature)}
