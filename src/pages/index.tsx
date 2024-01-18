@@ -99,6 +99,7 @@ const App: React.FC = () => {
       >
         Sign with NFC Card
       </button>
+      <div className="pt-2" />
       {publicKey && (
         <div className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-lg bg-gray-100 break-words">
           <h2 className="text-md sm:text-lg font-semibold text-gray-700">
@@ -113,6 +114,7 @@ const App: React.FC = () => {
           </button>
         </div>
       )}
+      <div className="pt-2" />
       {signature && (
         <div className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-lg bg-gray-100 break-words">
           <h2 className="text-md sm:text-lg font-semibold text-gray-700">
