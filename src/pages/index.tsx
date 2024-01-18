@@ -64,23 +64,26 @@ const App: React.FC = () => {
   };
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen bg-gray-200">
-      <h1 className="text-3xl font-bold text-gray-700 mb-4">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-gray-200 p-2">
+      <h1 className="text-xl sm:text-3xl font-bold text-gray-700 mb-4 text-center">
         NFC Content Signer
       </h1>
-      <p className="text-l text-black mb-4">
+      <p className="text-sm sm:text-l text-black mb-4 text-center">
         Digitally sign a piece of text with your FIDO2 compliant NFC card. Text
         is UTF-8 encoded and SHA-256 hashed. Must be used on mobile browser.
       </p>
       <textarea
-        className="w-1/2 p-2 border-2 border-gray-400 rounded-lg mb-4 text-black h-1/4"
+        className="w-full sm:w-1/2 p-2 border-2 border-gray-400 rounded-lg mb-4 text-black"
+        style={{ minHeight: "150px" }}
         value={inputText}
         onChange={handleTextChange}
         placeholder="Paste your text here"
       />
       {hashedText && (
-        <div className="mt-4 p-3 border border-gray-400 rounded-lg bg-gray-100">
-          <h2 className="text-lg font-semibold text-gray-700">Text Hash</h2>
+        <div className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-lg bg-gray-100">
+          <h2 className="text-md sm:text-lg font-semibold text-gray-700">
+            Text Hash
+          </h2>
           <p className="text-gray-600">{hashedText}</p>
           <button
             className="mt-2 px-4 py-1 bg-blue-300 text-white rounded hover:bg-blue-400 transition-colors flex items-center"
@@ -97,8 +100,10 @@ const App: React.FC = () => {
         Sign with NFC Card
       </button>
       {publicKey && (
-        <div className="mt-4 p-3 border border-gray-400 rounded-lg bg-gray-100">
-          <h2 className="text-lg font-semibold text-gray-700">Public Key</h2>
+        <div className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-lg bg-gray-100">
+          <h2 className="text-md sm:text-lg font-semibold text-gray-700">
+            Public Key
+          </h2>
           <p className="text-gray-600">{publicKey}</p>
           <button
             className="mt-2 px-4 py-1 bg-blue-300 text-white rounded hover:bg-blue-400 transition-colors flex items-center"
@@ -109,8 +114,10 @@ const App: React.FC = () => {
         </div>
       )}
       {signature && (
-        <div className="mt-4 p-3 border border-gray-400 rounded-lg bg-gray-100">
-          <h2 className="text-lg font-semibold text-gray-700">Signature</h2>
+        <div className="w-full sm:w-1/2 p-3 border border-gray-400 rounded-lg bg-gray-100">
+          <h2 className="text-md sm:text-lg font-semibold text-gray-700">
+            Signature
+          </h2>
           <p className="text-gray-600">{signature}</p>
           <button
             className="mt-2 px-4 py-1 bg-blue-300 text-white rounded hover:bg-blue-400 transition-colors flex items-center"
